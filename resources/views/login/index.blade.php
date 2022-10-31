@@ -1,6 +1,6 @@
 @section('container')
 
-@extends('layouts.main')
+@extends('layouts.auth')
 
     <h1>HALAMAN LOGIN</h1>
 
@@ -12,7 +12,7 @@
         </div>
         <div class="mb-3">
         <label for="pwd" class="form-label">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
         </div>
         <div class="form-check mb-3">
         <label class="form-check-label">
@@ -21,5 +21,9 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <div class="text-center mt-3">
+        <h6 class="m-0">Belum Punya Akun?</h6>
+        <a href="/register" class="btn btn-success">Daftar</a>
+    </div>
 @endsection
 

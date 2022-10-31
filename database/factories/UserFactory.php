@@ -21,6 +21,7 @@ class UserFactory extends Factory
         $type = ['admin', 'user'];
         return [
             'name' => fake()->name(),
+            'username' => $this->faker->unique()->userName(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => bcrypt('12345678'), // password

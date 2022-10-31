@@ -4,7 +4,7 @@
 
     <h1>HALAMAN REGISTER</h1>
 
-    <form action="/register" method="post">
+    <form action="/registertoko" method="post">
         @csrf
         <div class="mb-3 mt-3">
             <label for="name" class="form-label">Name:</label>

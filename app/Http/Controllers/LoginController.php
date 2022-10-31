@@ -84,17 +84,27 @@ class LoginController extends Controller
     }
 
     public function authenticate(Request $request){
-        // $credentials = $request->validate([
-        //     'email' =>  'required',
-        //     'password' => 'required'
-        // ]);
+        $credentials = $request->validate([
+            'email' =>  'required',
+            'password' => 'required'
+        ]);
 
-        // if(Auth::attempt($credentials)) {
-            // $request->session()->regenerate();
-            return redirect()->route('home');
-            // return redirect()->intended('/dashboard/posts'); |email:dns
-        // }
-        // return redirect()->route('/home')->with('loginError', 'login failed');
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            // return redirect()->route('home');
+            return redirect()->intended('/'); //|email:dns
+        }
+        return redirect()->route('login')->with('loginError', 'login failed');
 
+    }
+
+    public function logout() {
+        Auth::logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

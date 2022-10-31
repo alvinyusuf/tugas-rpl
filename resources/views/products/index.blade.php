@@ -1,7 +1,7 @@
 @section('container')
     @extends('layouts.main')
-    <h2>Halaman Home</h2>
-    <p>Halaman ini menampilkan sekilas produk</p>            
+    <h2>Halaman Produk</h2>
+    <p>Halaman ini menampilkan semua produk</p>            
     <table class="table table-hover">
         <thead>
         <tr>
