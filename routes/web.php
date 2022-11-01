@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 // use App\Http\Controllers\Auth\LoginController;
 // use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\StoreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,5 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register')-
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/registertoko', [StoreController::class, 'tampilan']);
