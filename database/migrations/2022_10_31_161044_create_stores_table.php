@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('stores', function (Blueprint $table) {
             $table->id();
+            $table->string('nametoko');
+            $table->integer('telp');
+            $table->string('provinsi');
+            $table->string('kota');
+            $table->string('kecamatan');
+            $table->string('desa');
             $table->timestamps();
         });
     }

@@ -14,19 +14,27 @@
         @yield('container')    
     </div>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $('#fakultas').change(function() { 
-        var fakultas = $(this).val(); 
-        $.ajax({
-            type: 'POST', 
-            url: 'ajax_jurusan.php', 
-            data: 'fakultas_id=' + fakultas, 
-            success: function(response) { 
-                $('#jurusan').html(response); 
-            }
-        });
-    });
+{{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"> --}}
+{{-- // res.setheader("Access-Control-Allow-Origin", "https://emsifa.github.io/api-wilayah-indonesia/api/regencies/11.json");
+//     $('#province').change(function() { 
+//         var fakultas = $(this).val();
+//         // header('Access-Control-Allow-Origin', '*');
+//         $.ajax({
+//             type: 'GET', 
+//             url: 'https://emsifa.github.io/api-wilayah-indonesia/api/regencies/11.json',
+//             options: {
+//                 cors: {
+//                     Access-Control-Allow-Origin: ['*'],
+//                 },
+//             },
+//             // data: 'fakultas_id=' + fakultas, 
+//             success: function(response) {
+//                 // response.header('Access-Control-Allow-Origin', '*'); 
+//                 $('#jurusan').html(response); 
+//             }
+//         });
+//     });
  
-</script>
+// </script> --}}
 </html>

@@ -32,3 +32,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/registertoko', [StoreController::class, 'tampilan']);
+// Route::resource('/registertoko', [StoreController::class]);
+
+Route::get('/provinsi', [StoreController::class, 'provinsi']);
+Route::get('/kota', [StoreController::class, 'kota']);
+Route::get('/kecamatan', [StoreController::class, 'kecamatan']);
+Route::get('/desa', [StoreController::class, 'desa']);
+Route::get('/konfirmasi', [StoreController::class, 'konfirmasi']);
