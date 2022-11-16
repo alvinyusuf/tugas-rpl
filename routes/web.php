@@ -29,3 +29,7 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register')-
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/profile', [RegisterController::class, 'detail']);
+
+Route::resource('/profile', [RegisterController::class]);

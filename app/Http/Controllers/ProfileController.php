@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 
-class RegisterController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        return view('register.index');
+        //
     }
 
     /**
@@ -36,21 +34,7 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => ['required', 'min:3'],
-            'username' => ['required', 'min:3', 'max:16', 'unique:users'],
-            'email' => ['required', 'email:dns', 'unique:users'],
-            'password' => 'required|min:3|max:255'
-        ]);
-        
-        $validatedData['password'] = Hash::make($validatedData['password']);
-
-        User::create($validatedData);
-
-        // $request->session()->flash('success', 'Registration successfull! please login');
-        // $request->session()->flash('sucess', 'Registration successfull! please login');
-
-        return redirect('/login')->with('sucess', 'Registration successfull! please login');
+        //
     }
 
     /**
@@ -96,9 +80,5 @@ class RegisterController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function detail() {
-        return view('profile.index');
     }
 }
